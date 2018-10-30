@@ -1,6 +1,6 @@
-# {servo_controller}
+# `servo_controller`
 
-This project provides/creates the program {servo_controller}, which
+This project provides/creates the program `servo_controller`, which
 allows for the basic motion control of a (standard)-ish servo motor.
 
 It is a simple nCurses UI, which represents the position of the 
