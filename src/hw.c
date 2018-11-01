@@ -6,6 +6,7 @@
 #include "hw.h"
 
 int32_t PIN_SIGNAL = -1;
+int32_t INVERT = 0;
 
 int32_t init_hw(int32_t* pi) {
   
@@ -31,6 +32,8 @@ int32_t update_hw (int32_t* pi, double position) {
 
   if (pi == NULL) return EINVAL;
   if (position < 0.0 || position > 1.0) return EINVAL;
+
+  if (INVERT) position = 1.0 - position;
 
   return set_servo_pulsewidth(*pi, PIN_SIGNAL,((int32_t)(500.0 + (2000.0 * position))));
 }

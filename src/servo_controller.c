@@ -74,6 +74,8 @@ int32_t main (int32_t argc, char* argv[]) {
       case KEY_RIGHT:
         update_ui(&ui, 1);
       break;
+      case KEY_F(1):
+        INVERT = !INVERT;
       default:
       break;
     }
